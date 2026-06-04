@@ -866,6 +866,151 @@ footer {
   "geo": {"@type": "GeoCoordinates", "latitude": 45.4126, "longitude": 9.2576}
 }
 </script>
+
+<style id="mobile-responsive">
+/* ═══════════════════════════════
+   MOBILE RESPONSIVE — sub-pages
+   breakpoint: 768px
+═══════════════════════════════ */
+
+/* Stack ALL inline 2-col and 3-col grids */
+@media (max-width: 768px) {
+
+  /* Inline grid overrides via attribute selectors */
+  [style*="grid-template-columns:1.2fr 1fr"],
+  [style*="grid-template-columns:1fr 1fr;gap:56px"],
+  [style*="grid-template-columns:1fr 1fr;gap:64px"],
+  [style*="grid-template-columns:1fr 1fr;gap:48px"],
+  [style*="grid-template-columns:1fr 1fr;gap:24px"],
+  [style*="grid-template-columns:1fr 1fr;gap:16px"],
+  [style*="grid-template-columns:repeat(3,1fr)"],
+  .dual-section {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* Hero sections */
+  .spec-hero,
+  .local-hero {
+    padding: 36px 0 32px;
+  }
+  .spec-hero h1,
+  .local-hero h1 {
+    font-size: clamp(28px, 7vw, 40px) !important;
+    margin-bottom: 16px;
+  }
+  .spec-hero p,
+  .local-hero p {
+    font-size: 15px !important;
+    margin-bottom: 24px;
+  }
+
+  /* Buttons — full width stack */
+  .hero-btns {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .hero-btns .btn-primary,
+  .hero-btns .btn-outline,
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* Info box */
+  .info-box {
+    padding: 20px 16px;
+  }
+  .info-row {
+    gap: 10px;
+  }
+  .info-label {
+    min-width: 68px;
+    font-size: 13px;
+  }
+  .info-val { font-size: 13px; }
+
+  /* Area cards (sportiva) */
+  .area-card { padding: 24px 20px; }
+
+  /* Sede link cards in sedi section */
+  .sede-link { padding: 12px 14px; }
+
+  /* Services grid */
+  .services-grid { grid-template-columns: 1fr !important; }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  /* Nav already handled by main CSS */
+  .nav-links { display: none !important; }
+  .nav-cta   { display: none !important; }
+  .hamburger { display: flex !important; }
+
+  /* Trust bar */
+  .trust-items {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: center;
+  }
+  .trust-divider { display: none; }
+
+  /* CTA section */
+  [style*="padding:80px 0;background:var(--verde-scuro)"] {
+    padding: 56px 0 !important;
+  }
+
+  /* Related links grid (2 col) → 1 col */
+  [style*="grid-template-columns:1fr 1fr;gap:16px;margin-top:8px"],
+  [style*="grid-template-columns:1fr 1fr;gap:12px"] {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* Sport tiles — keep 2 col (they're small pill-style) */
+  [style*="grid-template-columns:1fr 1fr;gap:8px"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  /* Section paddings */
+  [style*="padding:72px 0"],
+  [style*="padding:64px 0"],
+  [style*="padding:56px 0"] {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb { font-size: 12px; padding: 10px 0; }
+
+  /* Credentials */
+  .spec-card { padding: 28px 20px; }
+
+  /* List checks */
+  .list-check li { font-size: 13px; }
+  .spec-list li  { font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .spec-hero h1,
+  .local-hero h1 { font-size: 26px !important; }
+  .section-title  { font-size: 24px !important; }
+  .area-card h2   { font-size: 22px !important; }
+}
+</style>
 </head>
 <body>
 <nav>
