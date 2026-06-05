@@ -1024,7 +1024,7 @@ footer {
         <li><a href="index.html#sedi">Dove ricevo</a></li>
         <li><a href="index.html#recensioni">Recensioni</a></li>
       </ul>
-      <a href="index.html#prenota" class="nav-cta">Prenota una seduta →</a>
+      <a href="#prenota" class="nav-cta">Prenota una seduta →</a>
       <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
       </div>
@@ -1035,7 +1035,7 @@ footer {
     <a href="index.html#servizi" onclick="toggleMenu()">Trattamenti</a>
     <a href="index.html#specializzazioni" onclick="toggleMenu()">Specializzazioni</a>
     <a href="index.html#sedi" onclick="toggleMenu()">Dove ricevo</a>
-    <a href="index.html#prenota" onclick="toggleMenu()">Prenota una seduta</a>
+    <a href="#prenota" onclick="toggleMenu()">Prenota una seduta</a>
   </div>
 </nav>
 
@@ -1052,7 +1052,7 @@ footer {
         <h1>Osteopata a<br><em>San Donato Milanese</em></h1>
         <p>Angelo Barone D.O. riceve in Via Enrico Mattei 54 — a due passi dalla fermata MM3 San Donato. Trattamenti osteopatici per adulti, sportivi, donne in gravidanza e pavimento pelvico.</p>
         <div class="hero-btns">
-          <a href="index.html#prenota" class="btn-primary">Prenota una seduta →</a>
+          <a href="#prenota" class="btn-primary">Prenota una seduta →</a>
           <a href="#come-arrivare" class="btn-outline">Come arrivare</a>
         </div>
       </div>
@@ -1192,6 +1192,123 @@ footer {
     </div>
   </div>
 </div>
+<!-- PRENOTAZIONE SAN DONATO -->
+<section id="prenota" style="padding:64px 0;background:var(--avorio);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start;">
+
+      <div class="fade-in">
+        <p class="tag">Prenota a San Donato Milanese</p>
+        <h2 class="section-title">Scegli il tipo di visita</h2>
+        <p style="font-size:15px;color:var(--testo-s);line-height:1.8;margin-bottom:24px;">
+          Prenota direttamente online &mdash; scegli il tipo di visita e seleziona data e orario disponibili.
+          Puoi anche scrivermi su WhatsApp.
+        </p>
+        <ul class="prenota-steps">
+          <li class="step">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <h4>Scegli il tipo di visita</h4>
+              <p>Prima visita (60 min), trattamento successivo, o visita specializzata gravidanza / pavimento pelvico</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <h4>Seleziona data e orario</h4>
+              <p>Lun &middot; Mar &middot; Mer: 8:00&ndash;13:00 &middot; Sab: 8:00&ndash;12:30 &mdash; vedi le disponibilit&agrave; in tempo reale</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num">3</div>
+            <div class="step-text">
+              <h4>Ricevi conferma</h4>
+              <p>Email di conferma immediata con indirizzo e dettagli della seduta</p>
+            </div>
+          </li>
+        </ul>
+        <div class="tariffe-box" style="margin-top:24px;">
+          <h4>Tariffe &mdash; San Donato Milanese</h4>
+          <div class="tariffa-row">
+            <span class="tariffa-name">Prima visita / Trattamento (60 min)</span>
+            <span class="tariffa-price">&euro;65</span>
+          </div>
+          <p style="font-size:12px;color:var(--testo-s);margin-top:10px;line-height:1.6;">
+            Pagamento in studio: contanti o carta. Fattura emessa a fine seduta &mdash; detraibile al 19%.
+            Cancellazioni: preavviso minimo 24 ore.
+          </p>
+        </div>
+      </div>
+
+      <div class="fade-in">
+        <div class="calendly-box">
+          <div class="calendly-header">
+            <h3>Prenota online &mdash; San Donato</h3>
+            <p>Via Enrico Mattei 54 &middot; Lun&ndash;Mer 8:00&ndash;13:00 &middot; Sab 8:00&ndash;12:30</p>
+          </div>
+          <div class="calendly-body">
+            <div class="form-group">
+              <label class="form-label">Tipo di visita</label>
+              <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+
+                <a href="https://calendly.com/angelobarone-osteopata/prima-visita"
+                   target="_blank"
+                   style="display:flex;align-items:center;justify-content:space-between;
+                          padding:14px 16px;background:var(--avorio);border:1.5px solid var(--verde);
+                          border-radius:var(--radius-sm);text-decoration:none;transition:background .2s;"
+                   onmouseover="this.style.background='var(--verde-light)'"
+                   onmouseout="this.style.background='var(--avorio)'">
+                  <div>
+                    <span style="display:block;font-size:14px;font-weight:500;color:var(--testo);">Prima visita osteopatica</span>
+                    <span style="font-size:12px;color:var(--testo-s);">60 min &middot; &euro;65</span>
+                  </div>
+                  <span style="font-size:18px;color:var(--verde);">&rarr;</span>
+                </a>
+
+                <a href="https://calendly.com/angelobarone-osteopata/trattamento-osteopatico-1"
+                   target="_blank"
+                   style="display:flex;align-items:center;justify-content:space-between;
+                          padding:14px 16px;background:var(--avorio);border:1.5px solid var(--sabbia);
+                          border-radius:var(--radius-sm);text-decoration:none;transition:all .2s;"
+                   onmouseover="this.style.borderColor='var(--verde)';this.style.background='var(--verde-light)'"
+                   onmouseout="this.style.borderColor='var(--sabbia)';this.style.background='var(--avorio)'">
+                  <div>
+                    <span style="display:block;font-size:14px;font-weight:500;color:var(--testo);">Trattamento osteopatico</span>
+                    <span style="font-size:12px;color:var(--testo-s);">60 min &middot; &euro;65</span>
+                  </div>
+                  <span style="font-size:18px;color:var(--verde);">&rarr;</span>
+                </a>
+
+                <a href="https://calendly.com/angelobarone-osteopata/gravidanza-pavimento-pelvico-1"
+                   target="_blank"
+                   style="display:flex;align-items:center;justify-content:space-between;
+                          padding:14px 16px;background:var(--avorio);border:1.5px solid var(--sabbia);
+                          border-radius:var(--radius-sm);text-decoration:none;transition:all .2s;"
+                   onmouseover="this.style.borderColor='var(--verde)';this.style.background='var(--verde-light)'"
+                   onmouseout="this.style.borderColor='var(--sabbia)';this.style.background='var(--avorio)'">
+                  <div>
+                    <span style="display:block;font-size:14px;font-weight:500;color:var(--testo);">Gravidanza &amp; Pavimento pelvico</span>
+                    <span style="font-size:12px;color:var(--testo-s);">60 min &middot; &euro;65</span>
+                  </div>
+                  <span style="font-size:18px;color:var(--verde);">&rarr;</span>
+                </a>
+
+              </div>
+            </div>
+            <p class="calendly-note" style="margin-top:16px;">
+              Preferisci scrivere?
+              <a href="https://wa.me/message/HVDLFGXPIBD4E1" target="_blank">WhatsApp</a> &middot;
+              <a href="mailto:angelo.osteopata@gmail.com">Email</a> &middot;
+              <a href="tel:+393288778394">+39 328 877 8394</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section style="padding:80px 0;background:var(--verde-scuro);">
   <div class="container" style="text-align:center;">
     <p class="tag" style="color:var(--verde-light);">Prenota</p>
@@ -1200,7 +1317,7 @@ footer {
       La prima seduta dura circa 60 minuti. Inizio sempre dall'ascolto — poi decidiamo insieme il percorso più adatto.
     </p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-      <a href="index.html#prenota" class="btn-primary">Prenota online →</a>
+      <a href="#prenota" class="btn-primary">Prenota online →</a>
       <a href="https://wa.me/393XXX" class="btn-outline" style="color:white;border-color:rgba(255,255,255,0.4);">WhatsApp</a>
     </div>
   </div>
