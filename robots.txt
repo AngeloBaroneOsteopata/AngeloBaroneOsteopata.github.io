@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://angelobaroneosteopata.github.io/sitemap.xml
+Sitemap: https://angelobaroneosteopata.it/sitemap.xml
