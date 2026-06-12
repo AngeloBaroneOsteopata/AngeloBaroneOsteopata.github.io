@@ -879,6 +879,21 @@ footer {
 }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Angelo Barone","jobTitle":"Osteopata D.O.","description":"Osteopata D.O. con studio a San Donato Milanese, Cantù e Giussano.","url":"https://angelobaroneosteopata.github.io/chi-sono.html","alumniOf":{"@type":"EducationalOrganization","name":"SOMA Istituto Osteopatia Milano"},"knowsLanguage":["it","es"]}</script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5C483Q96ES"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5C483Q96ES');
+  </script>
+  <!-- Open Graph (anteprime di condivisione) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Angelo Barone — Osteopata">
+  <meta property="og:title" content="Chi sono — Angelo Barone, Osteopata D.O. | San Donato · Cantù · Giussano">
+  <meta property="og:description" content="Angelo Barone, osteopata D.O. Formazione SOMA Milano, specializzazione pavimento pelvico EDI Academy 2023. Come lavoro, credenziali e approccio al paziente.">
+  <meta property="og:url" content="https://angelobaroneosteopata.github.io/chi-sono.html">
 </head>
 <body>
 
@@ -888,7 +903,6 @@ footer {
     <ul class="nav-links">
       <li><a href="chi-sono.html" style="color:var(--verde);font-weight:500;">Chi sono</a></li>
       <li><a href="index.html#servizi">Trattamenti</a></li>
-      <li><a href="index.html#specializzazioni">Specializzazioni</a></li>
       <li><a href="index.html#sedi">Dove ricevo</a></li>
       <li><a href="index.html#recensioni">Recensioni</a></li>
     </ul>
@@ -898,7 +912,6 @@ footer {
   <div class="mobile-menu" id="mobileMenu">
     <a href="chi-sono.html" onclick="toggleMenu()">Chi sono</a>
     <a href="index.html#servizi" onclick="toggleMenu()">Trattamenti</a>
-    <a href="index.html#specializzazioni" onclick="toggleMenu()">Specializzazioni</a>
     <a href="index.html#sedi" onclick="toggleMenu()">Dove ricevo</a>
     <a href="index.html#prenota" onclick="toggleMenu()">Prenota una seduta</a>
   </div>
@@ -1172,11 +1185,13 @@ footer {
       <li><a href="cantu.html">Cant&ugrave;</a></li>
       <li><a href="giussano.html">Giussano</a></li>
     </ul></div>
-    <div class="footer-col"><h4>Specializzazioni</h4><ul>
-      <li><a href="pavimento-pelvico.html">Pavimento pelvico</a></li>
-      <li><a href="gravidanza.html">Gravidanza</a></li>
-      <li><a href="osteopatia-sportiva.html">Osteopatia sportiva</a></li>
-    </ul></div>
+    <div class="footer-col"><h4>Trattamenti</h4><ul>
+          <li><a href="mal-di-schiena.html">Mal di schiena</a></li>
+          <li><a href="cervicale.html">Cervicale e cefalee</a></li>
+          <li><a href="pavimento-pelvico.html">Pavimento pelvico</a></li>
+          <li><a href="gravidanza.html">Gravidanza</a></li>
+          <li><a href="osteopatia-sportiva.html">Osteopatia sportiva</a></li>
+        </ul></div>
   </div>
   <div class="footer-bottom">
     <p style="font-size:12px;">&copy; 2025 Angelo Barone &mdash; Osteopata D.O.</p>
@@ -1238,6 +1253,27 @@ window.addEventListener('scroll', () => {
       ? 'var(--verde)' : '';
   });
 });
+</script>
+<!-- GA4: eventi di conversione (Calendly, WhatsApp, telefono) -->
+<script>
+(function(){
+  function track(name, params){
+    if (typeof gtag === 'function') gtag('event', name, params || {});
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a');
+    if (!a || !a.href) return;
+    var h = a.href;
+    if (h.indexOf('calendly.com') > -1) {
+      var slug = h.split('calendly.com/')[1] || '';
+      track('click_calendly', { tipo_evento: slug.split('?')[0], pagina: location.pathname });
+    } else if (h.indexOf('wa.me') > -1 || h.indexOf('whatsapp.com') > -1) {
+      track('click_whatsapp', { pagina: location.pathname });
+    } else if (h.indexOf('tel:') === 0) {
+      track('click_telefono', { pagina: location.pathname });
+    }
+  }, true);
+})();
 </script>
 </body>
 </html>

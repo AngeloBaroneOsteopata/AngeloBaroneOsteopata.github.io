@@ -1005,6 +1005,13 @@ footer {
   .area-card h2   { font-size: 22px !important; }
 }
 </style>
+  <!-- Open Graph (anteprime di condivisione) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Angelo Barone — Osteopata">
+  <meta property="og:title" content="Osteopatia Sportiva e Posturologia — Angelo Barone D.O. | Milano e Brianza">
+  <meta property="og:description" content="Osteopatia sportiva e riequilibrio posturale. Infortuni, recupero, kinesiotaping, postura da lavoro, dolori cronici. Studi a San Donato Milanese, Cantù, Giussano.">
+  <meta property="og:url" content="https://angelobaroneosteopata.github.io/osteopatia-sportiva.html">
 </head>
 <body>
 <nav>
@@ -1013,7 +1020,6 @@ footer {
     <ul class="nav-links">
       <li><a href="index.html#chi-sono">Chi sono</a></li>
       <li><a href="index.html#servizi">Trattamenti</a></li>
-      <li><a href="index.html#specializzazioni">Specializzazioni</a></li>
       <li><a href="index.html#sedi">Dove ricevo</a></li>
       <li><a href="index.html#recensioni">Recensioni</a></li>
     </ul>
@@ -1023,7 +1029,6 @@ footer {
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html#chi-sono" onclick="toggleMenu()">Chi sono</a>
     <a href="index.html#servizi" onclick="toggleMenu()">Trattamenti</a>
-    <a href="index.html#specializzazioni" onclick="toggleMenu()">Specializzazioni</a>
     <a href="index.html#sedi" onclick="toggleMenu()">Dove ricevo</a>
     <a href="index.html#prenota" onclick="toggleMenu()">Prenota una seduta</a>
   </div>
@@ -1238,11 +1243,13 @@ footer {
       <li><a href="cantu.html">Cantù</a></li>
       <li><a href="giussano.html">Giussano</a></li>
     </ul></div>
-    <div class="footer-col"><h4>Specializzazioni</h4><ul>
-      <li><a href="pavimento-pelvico.html">Pavimento pelvico</a></li>
-      <li><a href="gravidanza.html">Gravidanza</a></li>
-      <li><a href="osteopatia-sportiva.html">Osteopatia sportiva</a></li>
-    </ul></div>
+    <div class="footer-col"><h4>Trattamenti</h4><ul>
+          <li><a href="mal-di-schiena.html">Mal di schiena</a></li>
+          <li><a href="cervicale.html">Cervicale e cefalee</a></li>
+          <li><a href="pavimento-pelvico.html">Pavimento pelvico</a></li>
+          <li><a href="gravidanza.html">Gravidanza</a></li>
+          <li><a href="osteopatia-sportiva.html">Osteopatia sportiva</a></li>
+        </ul></div>
   </div>
   <div class="footer-bottom">
     <p style="font-size:12px;">© 2025 Angelo Barone — Osteopata D.O.</p>
@@ -1303,6 +1310,27 @@ window.addEventListener('scroll', () => {
       ? 'var(--verde)' : '';
   });
 });
+</script>
+<!-- GA4: eventi di conversione (Calendly, WhatsApp, telefono) -->
+<script>
+(function(){
+  function track(name, params){
+    if (typeof gtag === 'function') gtag('event', name, params || {});
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a');
+    if (!a || !a.href) return;
+    var h = a.href;
+    if (h.indexOf('calendly.com') > -1) {
+      var slug = h.split('calendly.com/')[1] || '';
+      track('click_calendly', { tipo_evento: slug.split('?')[0], pagina: location.pathname });
+    } else if (h.indexOf('wa.me') > -1 || h.indexOf('whatsapp.com') > -1) {
+      track('click_whatsapp', { pagina: location.pathname });
+    } else if (h.indexOf('tel:') === 0) {
+      track('click_telefono', { pagina: location.pathname });
+    }
+  }, true);
+})();
 </script>
 </body>
 </html>
