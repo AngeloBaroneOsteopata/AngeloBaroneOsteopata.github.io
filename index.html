@@ -782,7 +782,7 @@ footer {
     height: 420px;
     min-height: 420px;
     max-height: 420px;
-    border-radius: var(--radius) var(--radius) 0 0;
+    border-radius: var(--radius);
     overflow: hidden;
   }
   .hero-photo picture {
@@ -797,18 +797,7 @@ footer {
     object-fit: cover;
     object-position: center 12%;
   }
-  .still-quote-overlay {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    background: var(--verde-scuro);
-    border-radius: 0 0 var(--radius) var(--radius);
-    padding: 10px 14px;
-    margin-top: 0;
-  }
-  .still-quote-overlay p:first-child { font-size: 12px !important; line-height: 1.5 !important; }
-  .still-quote-overlay p:last-child { font-size: 10px !important; }
+  .still-quote-overlay { display: none; }
   .about-grid { grid-template-columns: 1fr; }
   .about-visual { position: relative; top: 0; }
   .services-grid { grid-template-columns: 1fr 1fr; }
