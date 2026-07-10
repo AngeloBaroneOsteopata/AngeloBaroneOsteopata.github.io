@@ -749,9 +749,8 @@ footer {
 
 /* ── ANIMATION ── */
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 1;
+  transform: none;
 }
 .fade-in.visible {
   opacity: 1;
@@ -1117,7 +1116,6 @@ footer {
           <p style="font-size:11px;color:rgba(255,255,255,0.5);margin:0;letter-spacing:0.06em;">— Andrew Taylor Still (1828–1917), medico americano fondatore dell'Osteopatia</p>
         </div>
       </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1393,7 +1391,7 @@ footer {
           </div>
           <div class="tariffa-row" style="margin-bottom:10px;">
             <span class="tariffa-name">Pacchetto 5 sedute</span>
-            <span class="tariffa-price">€290</span>
+            <span class="tariffa-price"><s style="color:var(--testo-s);font-weight:400;">€325</s> €260</span>
           </div>
           <div style="font-size:11px;font-weight:500;color:var(--verde);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;margin-top:10px;">Cantù</div>
           <div class="tariffa-row">
@@ -1402,7 +1400,7 @@ footer {
           </div>
           <div class="tariffa-row" style="margin-bottom:10px;">
             <span class="tariffa-name">Pacchetto 5 sedute</span>
-            <span class="tariffa-price">€315</span>
+            <span class="tariffa-price"><s style="color:var(--testo-s);font-weight:400;">€350</s> €280</span>
           </div>
           <div style="font-size:11px;font-weight:500;color:var(--verde);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;margin-top:10px;">Giussano — CAP Salute</div>
           <div class="tariffa-row">
@@ -1437,15 +1435,13 @@ footer {
             <div class="form-group">
               <label class="form-label">Tipo di visita</label>
               <select class="form-select" id="visit-select" onchange="updateLink()">
-                <option value="pv">Prima visita osteopatica (60 min)</option>
-                <option value="tr">Trattamento osteopatico (60 min)</option>
-                <option value="gp">Gravidanza / Pavimento pelvico (60 min)</option>
+                <option value="tr">Trattamento Osteopatico (60 min)</option>
               </select>
             </div>
 
             <p id="price-note" style="font-size:12px;color:var(--verde);font-weight:500;margin:4px 0 12px;padding-left:2px;">💶 Tariffa: €65 — San Donato Milanese</p>
 
-            <a id="calendly-btn" href="https://calendly.com/angelobarone-osteopata/prima-visita" target="_blank" rel="noopener" class="btn-primary" style="width:100%;justify-content:center;margin-top:8px;text-decoration:none;">
+            <a id="calendly-btn" href="https://www.sumupbookings.com/angelo-barone-osteopata?utm_source=sito" target="_blank" rel="noopener" class="btn-primary" style="width:100%;justify-content:center;margin-top:8px;text-decoration:none;">
               Scegli data e orario →
             </a>
 
@@ -1467,9 +1463,9 @@ footer {
       <script>
         const links = {
           sd: {
-            pv: 'https://calendly.com/angelobarone-osteopata/prima-visita',
-            tr: 'https://calendly.com/angelobarone-osteopata/trattamento-osteopatico-1',
-            gp: 'https://calendly.com/angelobarone-osteopata/gravidanza-pavimento-pelvico-1'
+            pv: 'https://www.sumupbookings.com/angelo-barone-osteopata?utm_source=sito',
+            tr: 'https://www.sumupbookings.com/angelo-barone-osteopata?utm_source=sito',
+            gp: 'https://www.sumupbookings.com/angelo-barone-osteopata?utm_source=sito'
           },
           ct: {
             pv: 'https://calendly.com/angelobarone-osteopata/prima-visita-osteopatica',
@@ -1718,9 +1714,8 @@ window.addEventListener('scroll', () => {
     var a = e.target.closest && e.target.closest('a');
     if (!a || !a.href) return;
     var h = a.href;
-    if (h.indexOf('calendly.com') > -1) {
-      var slug = h.split('calendly.com/')[1] || '';
-      track('click_calendly', { tipo_evento: slug.split('?')[0], pagina: location.pathname });
+    if (h.indexOf('calendly.com') > -1 || h.indexOf('sumupbookings.com') > -1) {
+      track('click_prenota', { pagina: location.pathname });
     } else if (h.indexOf('wa.me') > -1 || h.indexOf('whatsapp.com') > -1) {
       track('click_whatsapp', { pagina: location.pathname });
     } else if (h.indexOf('tel:') === 0) {
@@ -1729,5 +1724,7 @@ window.addEventListener('scroll', () => {
   }, true);
 })();
 </script>
+<!-- SumUp Bookings embed (prenotazione San Donato sulla stessa pagina) -->
+<script src="https://www.sumupbookings.com/embed/sumup-bookings.js" data-slug="angelo-barone-osteopata" async></script>
 </body>
 </html>
