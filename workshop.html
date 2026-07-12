@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Workshop AI — Costruisci il tuo sito da solo | Angelo Barone</title>
-<meta name="description" content="Workshop pratico online: costruisci e pubblichi il tuo sito professionale con l'AI, in una sessione. Per professionisti della salute. Sabato 18 luglio.">
+<meta name="description" content="Workshop pratico online: costruisci e pubblichi il tuo sito professionale con l'AI, in una sessione. Per professionisti della salute. Sabato 18 o domenica 19 luglio.">
 <meta name="robots" content="noindex,nofollow">
 <link rel="canonical" href="https://angelobaroneosteopata.it/workshop.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,7 @@ footer b{font-family:var(--serif);color:var(--verde);font-size:16px}
     <h1>Costruisci il tuo sito.<br><i>Da solo</i>, con l'AI.</h1>
     <p>Un sito d'agenzia costa 1.500–8.000 € e ti lascia dipendente. Con l'AI lo costruisci e lo pubblichi tu, in una sessione — e lo aggiorni quando vuoi, senza dipendere da nessuno.</p>
     <div class="badges">
-      <span class="badge">📅 Sabato 18 luglio · mattina</span>
+      <span class="badge">📅 Sab 18 o Dom 19 luglio · mattina</span>
       <span class="badge">💻 Online (Google Meet)</span>
       <span class="badge">👥 Max 10 partecipanti</span>
       <span class="badge">💶 150 €</span>
@@ -112,7 +112,7 @@ footer b{font-family:var(--serif);color:var(--verde);font-size:16px}
   <div class="wrap">
     <h2>Dettagli</h2>
     <div class="dett">
-      <div class="d"><b>Sabato 18 luglio</b>mattina (~9:30–13:30)</div>
+      <div class="d"><b>Sab 18 o Dom 19 luglio</b>9:00–13:00</div>
       <div class="d"><b>Online</b>link Google Meet dopo l'iscrizione</div>
       <div class="d"><b>150 €</b>corso completo · max 10</div>
       <div class="d"><b>50 €</b>alternativa: guida pratica in PDF</div>
@@ -130,6 +130,8 @@ footer b{font-family:var(--serif);color:var(--verde);font-size:16px}
       <label>Professione</label><input id="prof" placeholder="Es. Fisioterapista">
       <label>Città</label><input id="citta" placeholder="Es. San Donato Milanese">
       <label>Il tuo contatto (email o telefono)</label><input id="contatto" placeholder="Come preferisci essere ricontattato">
+      <label>Giorno preferito</label>
+      <select id="giorno"><option>Sabato 18 luglio</option><option>Domenica 19 luglio</option><option>Indifferente</option></select>
       <label>Cosa ti interessa</label>
       <select id="scelta"><option>Corso completo — 150 €</option><option>Guida PDF — 50 €</option><option>Ho solo qualche domanda</option></select>
       <div class="chk"><input type="checkbox" id="consenso"><label for="consenso" style="margin:0;color:var(--grigio)">Acconsento a essere ricontattato per l'iscrizione al workshop. I miei dati sono usati solo a questo scopo.</label></div>
@@ -151,7 +153,7 @@ const NUM="393288778394", MAIL="angelo.osteopata@gmail.com";
 function utm(){const p=new URLSearchParams(location.search);const s=p.get("utm_source"),c=p.get("utm_content");return (s||c)?`\n(fonte: ${s||""}${c?" / "+c:""})`:"";}
 function build(){
   const g=id=>document.getElementById(id).value.trim();
-  return `Ciao Angelo, vorrei iscrivermi al Workshop AI del 18 luglio.\nNome: ${g("nome")}\nProfessione: ${g("prof")}\nCittà: ${g("citta")}\nInteresse: ${g("scelta")}\nContatto: ${g("contatto")}${utm()}`;
+  return `Ciao Angelo, vorrei iscrivermi al Workshop AI (18 o 19 luglio).\nNome: ${g("nome")}\nProfessione: ${g("prof")}\nCittà: ${g("citta")}\nGiorno: ${g("giorno")}\nInteresse: ${g("scelta")}\nContatto: ${g("contatto")}${utm()}`;
 }
 function invia(){
   if(!document.getElementById("consenso").checked){alert("Per procedere serve la spunta di consenso.");return;}
@@ -159,8 +161,9 @@ function invia(){
   window.open("https://wa.me/"+NUM+"?text="+encodeURIComponent(build()),"_blank");
 }
 document.getElementById("mail").addEventListener("click",e=>{e.preventDefault();
-  location.href="mailto:"+MAIL+"?subject="+encodeURIComponent("Iscrizione Workshop AI 18 luglio")+"&body="+encodeURIComponent(build());
+  location.href="mailto:"+MAIL+"?subject="+encodeURIComponent("Iscrizione Workshop AI 18/19 luglio")+"&body="+encodeURIComponent(build());
 });
 </script>
 </body>
 </html>
+           
