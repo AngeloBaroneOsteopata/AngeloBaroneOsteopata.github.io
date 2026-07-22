@@ -347,7 +347,7 @@ nav {
   font-family: var(--serif);
   font-size: 28px;
   font-weight: 400;
-  color: var(--verde-light);
+  color: rgba(58,82,53,0.55);
   line-height: 1;
   flex-shrink: 0;
   width: 36px;
@@ -504,7 +504,7 @@ nav {
   font-family: var(--serif);
   font-size: 48px;
   font-weight: 400;
-  color: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.34);
   line-height: 1;
   margin-bottom: 16px;
 }
@@ -1033,6 +1033,13 @@ footer {
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/dm-sans-latin-400-normal.woff2') format('woff2');}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/dm-sans-latin-500-normal.woff2') format('woff2');}
 </style>
+<style id="mobile-wa-fix">
+@media (max-width:768px){
+  .float-wa{font-size:0!important;gap:0!important;width:58px;height:58px;padding:0!important;border-radius:50%!important;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,0.28);}
+  .float-wa svg{width:28px!important;height:28px!important;}
+  .float-cta{bottom:16px;right:16px;gap:0;}
+}
+</style>
 </head>
 <body>
 
@@ -1318,11 +1325,11 @@ footer {
 
       <a href="cantu.html" class="sede-card fade-in" style="text-decoration:none;display:block;">
         <div class="sede-num">02</div>
-        <div class="sede-city">Cantu</div>
+        <div class="sede-city">Cantù</div>
         <div class="sede-type">Studio presso Farmacia - Como</div>
         <div class="sede-info">
           <strong>Indirizzo</strong>
-          Via Giacomo Matteotti 18, 22063 Cantu (CO)
+          Via Giacomo Matteotti 18, 22063 Cantù (CO)
           <strong>Orari</strong>
           Mer / Gio / Ven: 15:00-19:30
           <strong>Tariffa</strong>
